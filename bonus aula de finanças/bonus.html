@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula Especial de Finanças</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Georgia', serif;
+      color: #e0c97f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .luxury-button {
+      padding: 1.5rem 3.5rem;
+      font-size: 1.6rem;
+      color: #000;
+      background: linear-gradient(135deg, #ffd700, #b8860b);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: pulse 2s infinite, bounce 1s infinite;
+    }
+
+    .luxury-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+      50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); }
+      100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    #message {
+      display: none;
+      font-size: 2rem;
+      color: #ffd700;
+      background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+      margin-top: 3rem;
+    }
+
+    #final-button {
+      display: none;
+      padding: 1.5rem 3.5rem;
+      font-size: 1.6rem;
+      color: #000;
+      background: linear-gradient(135deg, #ffd700, #b8860b);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      margin-top: 2rem;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .luxury-button, #final-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.4rem;
+      }
+
+      #message {
+        font-size: 1.5rem;
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="luxury-button" id="bonus-button">🎁 Acesse seu bônus aqui 🎁</button>
+
+    <div id="message">
+      <h2>🎉 Parabéns!</h2>
+      <p>Você acaba de ganhar <strong>acesso aos livros mas antes veja essa aula gratuita de presente</strong> que vai transformar sua visão sobre dinheiro!</p>
+    </div>
+
+    <a href="../aula em video/video.html">
+      <button id="final-button">Veja a aula para receber o acesso</button>
+    </a>
+  </div>
+
+  <script>
+    document.getElementById('bonus-button').addEventListener('click', () => {
+      document.getElementById('bonus-button').style.display = 'none';
+      document.getElementById('message').style.display = 'block';
+      document.getElementById('final-button').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
